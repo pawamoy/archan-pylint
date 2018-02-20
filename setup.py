@@ -27,7 +27,7 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='archan_pylint',
+    name='archan-pylint',
     version='0.1.0',
     license='ISC',
     description='Archan plugin for Pylint (number of messages per module).',
