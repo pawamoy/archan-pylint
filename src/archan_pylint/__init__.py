@@ -2,8 +2,9 @@ import sys
 import os
 
 try:
-    from archan import Provider, Argument, DMM
+    from archan import Provider, Argument, DMM, Logger
     from pylint.lint import Run
+
 
     class LoggerWriter:
         def __init__(self, level):
@@ -13,8 +14,6 @@ try:
             if message != '\n':
                 self.level(message)
 
-        def flush(self):
-            self.level(sys.stderr)
 
     class MessagesPerModule(Provider):
         """Pylint provider for Archan."""
@@ -38,10 +37,11 @@ try:
             Returns:
                 archan.DSM: instance of archan DSM.
             """
+            logger = Logger.get_logger(__name__)
             pylint_args = pylint_args or []
 
-            sys.stdout = LoggerWriter(self.logger.debug)
-            sys.stderr = LoggerWriter(self.logger.warning)
+            sys.stdout = LoggerWriter(logger.debug)
+            sys.stderr = LoggerWriter(logger.warning)
 
             try:
                 run = Run(pylint_args, do_exit=False)
