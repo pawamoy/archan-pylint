@@ -14,20 +14,20 @@ Archan-Pylint
 |gitter|
 
 
-.. |travis| image:: https://travis-ci.org/Genida/archan-pylint.svg?branch=master
-    :target: https://travis-ci.org/Genida/archan-pylint/
+.. |travis| image:: https://travis-ci.org/Pawamoy/archan-pylint.svg?branch=master
+    :target: https://travis-ci.org/Pawamoy/archan-pylint/
     :alt: Travis-CI Build Status
 
 .. |codacygrade| image:: https://api.codacy.com/project/badge/Grade/6cac1ad3e1a34d349ef4dd73cf3e5276
-    :target: https://www.codacy.com/app/Genida/archan-pylint/dashboard
+    :target: https://www.codacy.com/app/Pawamoy/archan-pylint/dashboard
     :alt: Codacy Code Quality Status
 
 .. |codacycoverage| image:: https://api.codacy.com/project/badge/Coverage/6cac1ad3e1a34d349ef4dd73cf3e5276
-    :target: https://www.codacy.com/app/Genida/archan-pylint/dashboard
+    :target: https://www.codacy.com/app/Pawamoy/archan-pylint/dashboard
     :alt: Codacy Code Coverage
 
-.. |pyup| image:: https://pyup.io/repos/github/Genida/archan-pylint/shield.svg
-    :target: https://pyup.io/repos/github/Genida/archan-pylint/
+.. |pyup| image:: https://pyup.io/repos/github/Pawamoy/archan-pylint/shield.svg
+    :target: https://pyup.io/repos/github/Pawamoy/archan-pylint/
     :alt: Updates
 
 .. |version| image:: https://img.shields.io/pypi/v/archan-pylint.svg?style=flat
@@ -38,9 +38,9 @@ Archan-Pylint
     :target: https://pypi.org/project/archan-pylint/
     :alt: PyPI Wheel
 
-.. |gitter| image:: https://badges.gitter.im/Genida/archan-pylint.svg
-    :target: https://gitter.im/Genida/archan-pylint
-    :alt: Join the chat at https://gitter.im/Genida/archan-pylint
+.. |gitter| image:: https://badges.gitter.im/Pawamoy/archan-pylint.svg
+    :target: https://gitter.im/Pawamoy/archan-pylint
+    :alt: Join the chat at https://gitter.im/Pawamoy/archan-pylint
 
 
 

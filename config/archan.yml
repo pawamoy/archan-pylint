@@ -1,0 +1,8 @@
+analyzers:
+  - providers:
+    - archan_pylint.MessagesPerModule:
+        pylint_args:
+          - archan_pylint
+    checkers:
+      - archan.CodeClean:
+          threshold: 1

@@ -2,7 +2,7 @@ import sys
 import os
 
 try:
-    from archan import Provider, Argument, DSM
+    from archan import Provider, Argument, DMM
     from pylint.lint import Run
 
     class LoggerWriter:
@@ -56,8 +56,9 @@ try:
             for k, v in run.linter.stats['by_module'].items():
                 entities.append(k)
                 data.append([sum(v.values())])
-            
-            return DSM(data=data, entities=entities)
+            entities.append('Messages')
+
+            return DMM(data=data, entities=entities)
 
 except ImportError:
     class MessagesPerModule():
