@@ -12,21 +12,20 @@ try:
 
         def write(self, message):
             if message != '\n':
-                self.level(message)
+                self.level('from pylint: ' + message)
 
 
-    class PyLintProvider(Provider):
+    class PylintProvider(Provider):
         """Pylint provider for Archan."""
 
-        identifier = 'archan_pylint.MessagesPerModule'
+        identifier = 'archan_pylint.PylintProvider'
         name = 'Pylint Provider: Issues per Module'
         description = 'Number of Pylint messages per module.'
         argument_list = (
             Argument('pylint_args', list, 'Pylint arguments as a list.'),
-            Argument('depth', int, 'The depth of the matrix to generate.'),
         )
 
-        def get_data(self, pylint_args=None, depth=None):
+        def get_data(self, pylint_args=None):
             """
             Provide matrix data for Pylint messages in a set of packages.
 

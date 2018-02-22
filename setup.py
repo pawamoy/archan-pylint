@@ -66,7 +66,7 @@ setup(
     ],
     entry_points={
         'archan': [
-            'archan_pylint.PyLintProvider = archan_pylint:PyLintProvider'  # noqa
+            'archan_pylint.PylintProvider = archan_pylint:PylintProvider'  # noqa
         ]
     },
 )
