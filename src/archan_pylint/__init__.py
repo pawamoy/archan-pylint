@@ -1,8 +1,8 @@
 import sys
-import os
+
 
 try:
-    from archan import Provider, Argument, DMM, Logger
+    from archan import Provider, Argument, DomainMappingMatrix, Logger
     from pylint.lint import Run
 
 
@@ -15,18 +15,18 @@ try:
                 self.level(message)
 
 
-    class MessagesPerModule(Provider):
+    class PyLintProvider(Provider):
         """Pylint provider for Archan."""
 
         identifier = 'archan_pylint.MessagesPerModule'
-        name = 'Messages per Module'
+        name = 'Pylint Provider: Issues per Module'
         description = 'Number of Pylint messages per module.'
-        arguments = (
+        argument_list = (
             Argument('pylint_args', list, 'Pylint arguments as a list.'),
             Argument('depth', int, 'The depth of the matrix to generate.'),
         )
 
-        def get_dsm(self, pylint_args=None, depth=None):
+        def get_data(self, pylint_args=None, depth=None):
             """
             Provide matrix data for Pylint messages in a set of packages.
 
@@ -58,8 +58,8 @@ try:
                 data.append([sum(v.values())])
             entities.append('Messages')
 
-            return DMM(data=data, entities=entities)
+            return DomainMappingMatrix(data=data, entities=entities)
 
 except ImportError:
-    class MessagesPerModule():
+    class PyLintProvider:
         """Empty provider, please install Archan and Pylint."""
